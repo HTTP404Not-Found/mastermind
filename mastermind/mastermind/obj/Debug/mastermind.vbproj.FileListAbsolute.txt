@@ -1,0 +1,10 @@
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\bin\Debug\mastermind.exe
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\bin\Debug\mastermind.pdb
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\bin\Debug\mastermind.xml
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.vbprojAssemblyReference.cache
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.Resources.resources
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.vbproj.GenerateResource.cache
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.vbproj.CoreCompileInputs.cache
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.exe
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.xml
+U:\ict\2021-2022_ict\VB\mastermind\mastermind\obj\Debug\mastermind.pdb

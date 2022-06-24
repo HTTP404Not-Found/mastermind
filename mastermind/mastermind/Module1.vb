@@ -1,4 +1,4 @@
-﻿Module Module1
+Module Module1
     Sub menu(ByRef b As Single)
         Dim a As String
         Console.WriteLine("1.開始遊戲")
@@ -102,11 +102,25 @@
     Sub start_the_game()
         Dim T_or_F As Boolean = False
         Dim haveW As Boolean = False
-        Dim i, Target(4), judge(4), temporary_Target(4), First, Finish As Integer
+        Dim i, Target(4), judge(4), temporary_Target(4), First, Finish, g As Integer
         Dim write_file, name, hint, rmm As String
         Dim input As Char
         Dim time As Date
-        Dim sfile As IO.StreamWriter = IO.File.AppendText("U:\ict\2021-2022_ict\VB\mastermind\date.txt")
+
+        Dim sr As IO.StreamReader = io.File.OpenText("U:\ict\2021-2022_ict\VB\mastermind\date.txt")
+        Dim line_string, text(1000) As String
+
+        line_string = sr.ReadLine()
+        g = 1
+        text(g) = line_string
+
+        While line_string <> Nothing
+            g = g + 1
+            text(g) = line_string
+            line_string = sr.ReadLine()
+        End While
+
+        sr.Close()
 
         T_or_F = False
         For j = 1 To 4
@@ -209,9 +223,15 @@
             If rmm < 9 Then
                 rmm = "0" & rmm
             End If
+
             write_file = name & rmm & Finish - First
-            sfile.WriteLine(write_file)
-            sfile.Close()
+            text(0) = write_file
+
+            Dim sw As IO.StreamWriter = IO.File.CreateText("U:\ict\2021-2022_ict\VB\mastermind\date.txt")
+            For h = 0 To g
+                sw.WriteLine(text(h))
+            Next
+            sw.Close()
         End If
     End Sub
 
@@ -228,21 +248,28 @@
 
     Sub view_top_10_records()
         Dim sfile As IO.StreamReader = IO.File.OpenText("U:\ict\2021-2022_ict\VB\mastermind\date.txt")
-        Dim line_string, temp As String
+        Dim line_string, temp, help As String
         Dim x, j, z As Integer
-        Dim a(100) As String
+        Dim a(100), name(100) As String
         line_string = sfile.ReadLine()
 
         While line_string <> Nothing
-            z = line_string.Length
             x = x + 1
-            For i = 1 To z
-                a(x) = a(x) & line_string(i)
-            Next
+            a(x) = line_string
             line_string = sfile.ReadLine()
         End While
 
         For i = 1 To x
+            a(i) = help
+            For y = 0 To 19
+                name(i) = help(y)
+            Next
+            For y = 20 To 21
+
+            Next
+        Next
+
+            For i = 1 To x
             For j = 1 To x - i
                 If a(j) > a(j + 1) Then
                     temp = a(j)
